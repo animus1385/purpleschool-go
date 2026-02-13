@@ -3,9 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	const USD_TO_EUR = 0.84
-	const USD_TO_RUB = 77.19
+	amount, from, to := inputUser()
+	_ = calculate(amount, from, to)
+}
+func inputUser() (float64, string, string) {
+	var amount float64
+	var from, to string
 
-	const EUR_TO_RUB = USD_TO_RUB / USD_TO_EUR
-	fmt.Println(EUR_TO_RUB)
+	fmt.Scan(&amount, &from, &to)
+
+	return amount, from, to
+}
+
+func calculate(amount float64, from string, to string) float64 {
+	return 0
 }
